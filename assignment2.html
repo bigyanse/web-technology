@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Assignment 2</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/style.css" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				padding: 2%;
+			}
+
+			.container {
+				width: 100%;
+				padding: 2%;
+				border: 1px solid black;
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			.container > form {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.form-item {
+				width: 100%;
+				height: 40px;
+				display: flex;
+				align-items: center;
+			}
+
+			.form-item > p:first-child, .form-item > div:first-child {
+				width: 25%;
+			}
+
+			.form-item > p:last-child, .form-item > div:last-child  {
+				width: 75%;
+			}
+
+			.form-item input[type=text], form > div > div > textarea {
+				width: 100%;
+			}
+
+			textarea {
+				height: 60px;
+			}
+
+			#error {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>User Registration Form</h1>
+			<p id="error"></p>
+			<form id="form">
+				<div class="form-item">
+					<p><label>Name</label></p>
+					<p><input name="name" type="text" autofocus /></p>
+				</div>
+				<div class="form-item">
+					<p><label>Email</label></p>
+					<p><input name="email" type="email" /></p>
+				</div>
+				<div class="form-item">
+					<p><label>Gender</label></p>
+					<p>
+						<input type="radio" name="gender" value="Male" /> Male
+						<input type="radio" name="gender" value="Female" /> Female
+					</p>
+				</div>
+				<div class="form-item">
+					<p><label>Phone</label></p>
+					<p><input name="phone" type="text" /></p>
+				</div>
+				<div class="form-item">
+					<p><label>Country</label></p>
+					<select name="country" >
+						<option value="" selected>Select Country</option>
+						<option value="Nepal">Nepal</option>
+						<option value="America">America</option>
+					</select>
+				</div>
+				<div>
+					<div><label>Description</label></div>
+					<div><textarea name="description"></textarea></div>
+				</div>
+				<div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+					<button name="submit" type="submit">Registration</button>
+				</div>
+			</form>	
+		</div>
+		<script>
+			const error = document.getElementById("error");
+			document.getElementById("form").addEventListener("submit", (event) => {
+				event.preventDefault();
+				const name = document.querySelector("input[name=name]").value;
+				const email = document.querySelector("input[name=email]").value;
+				const gender = document.querySelector("input[name=gender]:checked").value;
+				const phone = document.querySelector("input[name=phone]").value;
+				const country = document.querySelector("select[name=country]").value;
+				const description = document.querySelector("textarea[name=description]").value;
+				if(name && email && gender && phone && country && description) {
+					alert(`Hello, ${name}! Your email is ${email}. You are a ${gender.toLowerCase()}. You are from ${country}. Your contact is ${phone}. Your description is: ${description}.`);
+				} else {
+					error.textContent = "Please fill in all the fields!";
+				}
+			});
+		</script>
+	</body>
+</html>
