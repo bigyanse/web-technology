@@ -1,0 +1,10 @@
+{
+	"book": {
+		"isbn": "",
+		"title": "",
+		"author": "",
+		"publisher": "",
+		"price": "",
+		"currency": ""
+	}
+}

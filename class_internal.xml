@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE class [
+  <!ELEMENT class (roll_no, name, faculty)>
+  <!ELEMENT roll_no (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT faculty (#PCDATA)>
+]>
+<class>
+  <roll_no>1</roll_no>
+  <name>Aakash Khanal</name>
+  <faculty>BCT</faculty>
+</class>

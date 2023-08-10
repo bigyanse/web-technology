@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<book ISBN="1234567890">
+	<title>XML Basics</title>
+	<author>John Doe</author>
+	<publisher>ABC Publications</publisher>
+	<price currency="USD">29.99</price>
+</book>

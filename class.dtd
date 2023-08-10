@@ -1,0 +1,4 @@
+<!ELEMENT class (roll_no, name, faculty)>
+<!ELEMENT roll_no (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT faculty (#PCDATA)>

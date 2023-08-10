@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE teacher [
+	<!ELEMENT teacher (name,address,phone,age,email)>
+	<!ELEMENT name (first, last)>
+		<!ELEMENT first (#PCDATA)>
+		<!ELEMENT last (#PCDATA)>
+	<!ELEMENT address (#PCDATA)>
+	<!ELEMENT phone (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>
+]>
+<teacher>
+	<name>
+		<first>Ram</first>
+		<last>Kharel</last>
+	</name>
+	<address>Khwopa</address>
+	<phone>9812345678</phone>
+	<age>30</age>
+	<email>ram@gmail.com</email>
+</teacher>
